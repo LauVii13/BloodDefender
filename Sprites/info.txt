@@ -1,0 +1,9 @@
+Main character - White Blood Cell (with a gun)
+Villains - bacterias
+Trap - Red Blood Cells (a worker running with a box)
+
+
+Map - Left -> defense zone
+    - Right -> mobSpawn zone (platelets works)	
+      Limit of defense zone -> concertina
+    - Color - lightRed 

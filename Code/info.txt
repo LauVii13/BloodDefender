@@ -1,0 +1,6 @@
+Goal - Kill mobs until the platelelts finish their work
+
+Components:
+
+player moviments: w - a - s - d
+shoot: space 
