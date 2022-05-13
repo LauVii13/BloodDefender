@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637880070558047771
-    m_Hash: 2515013177
+      ticks: 637880655396317442
+    m_Hash: 2817103943
   m_LockFileStatus:
     m_FilePath: D:/Jogos/_Unity/Teste/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637880070648426467
-    m_Hash: 4193688565
+      ticks: 637880655397184832
+    m_Hash: 1252661484
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
@@ -926,12 +926,12 @@ m_PackageAssets:
         url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.rider.git
         revision: abb44f053e9a41d2e00e149e32a19bcec76e98b4
         path: 
-    - packageId: com.unity.ide.visualstudio@2.0.11
+    - packageId: com.unity.ide.visualstudio@2.0.15
       testable: 0
       isDirectDependency: 1
-      version: 2.0.11
+      version: 2.0.15
       source: 1
-      resolvedPath: D:\Jogos\_Unity\Teste\Library\PackageCache\com.unity.ide.visualstudio@2.0.11
+      resolvedPath: D:\Jogos\_Unity\Teste\Library\PackageCache\com.unity.ide.visualstudio@2.0.15
       assetPath: Packages/com.unity.ide.visualstudio
       name: com.unity.ide.visualstudio
       displayName: Visual Studio Editor
@@ -1011,20 +1011,20 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637613656180000000
+      datePublishedTicks: 637841884840000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.visualstudio.git
-        revision: 680e06d94ffca728223ae2cb14bb919cd354e2c1
+        revision: ca1ece42f5a2c5484ba15a15bb975ccc1f6a1a3c
         path: 
-    - packageId: com.unity.ide.vscode@1.2.3
+    - packageId: com.unity.ide.vscode@1.2.5
       testable: 0
       isDirectDependency: 1
-      version: 1.2.3
+      version: 1.2.5
       source: 1
-      resolvedPath: D:\Jogos\_Unity\Teste\Library\PackageCache\com.unity.ide.vscode@1.2.3
+      resolvedPath: D:\Jogos\_Unity\Teste\Library\PackageCache\com.unity.ide.vscode@1.2.5
       assetPath: Packages/com.unity.ide.vscode
       name: com.unity.ide.vscode
       displayName: Visual Studio Code Editor
@@ -1084,13 +1084,13 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637394922300000000
+      datePublishedTicks: 637800255360000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
-        url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.vscode.git
-        revision: b5ec9b38109e52b1b26597d521e4df75e042ebb9
+        url: https://github.com/Unity-Technologies/com.unity.ide.vscode.git
+        revision: b0740c80bfc2440527c317109f7c3d9100132722
         path: 
     - packageId: com.unity.test-framework@1.1.29
       testable: 0
@@ -3357,6 +3357,7 @@ m_PackageAssets:
         - 1.0.0
         - 1.0.5
         - 1.0.6
+        - 2.0.2
         compatible:
         - 0.1.5-preview
         - 0.1.6-preview
@@ -3364,6 +3365,7 @@ m_PackageAssets:
         - 1.0.0
         - 1.0.5
         - 1.0.6
+        - 2.0.2
         verified: 1.0.6
       dependencies: []
       resolvedDependencies: []
@@ -3426,6 +3428,9 @@ m_PackageAssets:
         - 1.1.0-preview.1
         - 1.1.0
         - 1.2.1
+        - 1.2.4
+        - 1.2.5
+        - 1.2.6
         compatible:
         - 0.0.12-preview.2
         - 0.0.12-preview.5
@@ -3441,7 +3446,10 @@ m_PackageAssets:
         - 1.1.0-preview.1
         - 1.1.0
         - 1.2.1
-        verified: 1.2.1
+        - 1.2.4
+        - 1.2.5
+        - 1.2.6
+        verified: 1.2.6
       dependencies: []
       resolvedDependencies: []
       keywords:
@@ -3497,12 +3505,17 @@ m_PackageAssets:
         - 2.0.1
         - 2.0.2
         - 2.1.0
+        - 2.1.1
+        - 2.1.2
         - 3.0.0
         - 3.0.1
         - 4.0.0
         - 4.0.1
         - 4.0.2
         - 4.0.3
+        - 4.0.4
+        - 4.1.0
+        - 4.2.0
         - 5.0.0-pre.1
         - 5.0.0-pre.2
         - 5.0.0
@@ -3510,9 +3523,17 @@ m_PackageAssets:
         - 6.0.0-pre.3
         - 6.0.0-pre.4
         - 6.0.0
+        - 6.0.1
+        - 6.0.2
+        - 6.0.3
+        - 7.0.0-pre.3
+        - 7.0.0-pre.4
+        - 7.0.0
+        - 8.0.0-pre.1
         compatible:
         - 4.0.3
-        verified: 4.0.3
+        - 4.0.4
+        verified: 4.0.4
       dependencies:
       - name: com.unity.2d.sprite
         version: 1.0.0
@@ -3594,6 +3615,7 @@ m_PackageAssets:
         - 5.0.0-pre.2
         - 5.0.0
         - 5.0.1
+        - 5.0.2
         compatible:
         - 4.0.2
         verified: 4.0.2
