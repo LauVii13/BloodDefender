@@ -19,6 +19,7 @@ public class RbcController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Movimento caso vivo
         if (isAlive)
         {
             transform.Translate(Vector2.down * speed * Time.deltaTime);
@@ -28,6 +29,7 @@ public class RbcController : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
+        //acertado por um tiro
         if (collision.CompareTag("Bullet"))
         {
             anim.SetTrigger("Dead");
@@ -38,6 +40,7 @@ public class RbcController : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
+        //colisão com player
         if (collision.gameObject.CompareTag("Player"))
         {
             isAlive = false;
@@ -45,6 +48,7 @@ public class RbcController : MonoBehaviour
             Destroy(gameObject, 1f);
         }
 
+        //sai da tela
         if (collision.gameObject.CompareTag("BottomWall"))
         {
             Destroy(gameObject, 1f);
