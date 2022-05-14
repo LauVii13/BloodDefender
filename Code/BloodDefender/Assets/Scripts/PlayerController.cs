@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     Vector2 moveInput;
 
     public GameObject bullet;
+    bool hitted = false;
     [SerializeField] Transform spawnBullet;
 
     Animator anim;
@@ -23,8 +24,12 @@ public class PlayerController : MonoBehaviour
     {
         anim.SetBool("isMoving", (Mathf.Abs(moveInput.x) > 0 || Mathf.Abs(moveInput.y) > 0));
 
-        Movement();
-        Shoot();
+        if (hitted == false)
+        {
+            Movement();
+            Shoot();
+        }
+
     }
 
     void Shoot()
@@ -43,5 +48,30 @@ public class PlayerController : MonoBehaviour
         transform.Translate(moveInput * Time.deltaTime * moveSpeed);
     }
 
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        //colisão com player
+        if (collision.gameObject.CompareTag("Rbc"))
+        {
+            anim.SetBool("isHitted", true);
+            hitted = true;
 
+            StartCoroutine(On());
+        }
+        else
+        {
+
+            anim.SetBool("isHitted", false);
+            hitted = false;
+        }
+
+        IEnumerator On()
+        {
+
+            yield return new WaitForSeconds(1f);
+
+            anim.SetBool("isHitted", false);
+            hitted = false;
+        }
+    }
 }
