@@ -6,11 +6,12 @@ public class SpFast : MonoBehaviour
 {
     [SerializeField] Transform[] spawnPoitns;
     [SerializeField] GameObject fast;
+    [SerializeField] float v;
 
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("SpawnFast", 1f, 1.5f);
+        InvokeRepeating("SpawnFast", 1f, v);
     }
     
     void SpawnFast()
