@@ -57,6 +57,7 @@ public class PlayerController : MonoBehaviour
             hitted = true;
 
             StartCoroutine(On());
+
         }
         else
         {
@@ -69,9 +70,13 @@ public class PlayerController : MonoBehaviour
         {
 
             yield return new WaitForSeconds(1f);
-
-            anim.SetBool("isHitted", false);
-            hitted = false;
+            
+            if(hitted == true)
+            {
+                anim.SetBool("isHitted", false);
+                hitted = false;
+            }
+          
         }
     }
 }
