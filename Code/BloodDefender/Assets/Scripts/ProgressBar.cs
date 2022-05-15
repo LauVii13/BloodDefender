@@ -28,12 +28,33 @@ public class ProgressBar : MonoBehaviour
     {
         if(slider.value < targetProgess)
         {
-            slider.value += FillSpeed * Time.deltaTime;
+            if (slider.value < 0)
+            {
+                slider.value = 1;
+            }else
+            {
+                if (GameController.instance.pain == true)
+                {
+                    slider.value += (GameController.instance.TotalScore * Time.deltaTime);
+                    StartCoroutine(On());
+                    GameController.instance.pain = false;
+                }
+                else
+                {
+                    slider.value += FillSpeed * Time.deltaTime;
+                }
+            }   
         }
+
     }
 
     public void IncrementProgress(float newProgress)
     {
         targetProgess = slider.value + newProgress;
+    }
+
+    IEnumerator On()
+    {
+        yield return new WaitForSeconds(1f);
     }
 }

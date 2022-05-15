@@ -58,10 +58,11 @@
     <Compile Include="Assets\Scripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\RbcController.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
-    <Compile Include="Assets\Scripts\FastController.cs" />
-    <Compile Include="Assets\Scripts\ProgressBar.cs" />
     <Compile Include="Assets\Scripts\Wall.cs" />
+    <Compile Include="Assets\Scripts\FastController.cs" />
     <Compile Include="Assets\Scripts\SlowControl.cs" />
+    <Compile Include="Assets\Scripts\ProgressBar.cs" />
+    <Compile Include="Assets\Scripts\GameController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
