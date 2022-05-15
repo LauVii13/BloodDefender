@@ -33,7 +33,7 @@ public class FastController : MonoBehaviour
         if (collision.gameObject.CompareTag("Defense-Zone"))
         {
             Destroy(this.gameObject);
-            GameController.instance.TotalScore -= 1f;
+            GameController.instance.TotalScore += 1f;
             GameController.instance.pain = true;
         }
     }

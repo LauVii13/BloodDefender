@@ -9,8 +9,9 @@ public class PlayerController : MonoBehaviour
 
     public GameObject bullet;
     bool hitted = false;
+    bool loading = false;
     [SerializeField] Transform spawnBullet;
-
+    [SerializeField] float reload;
     Animator anim;
 
     // Start is called before the first frame update
@@ -29,16 +30,24 @@ public class PlayerController : MonoBehaviour
             Movement();
             Shoot();
         }
-
+    }
+    IEnumerator FOn()
+    {
+        yield return new WaitForSeconds(reload);
+        loading = false;
     }
 
-    void Shoot()
+        void Shoot()
     {
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && loading == false)
         {
             Instantiate(bullet, spawnBullet.position, transform.rotation);
+            loading = true;
+            StartCoroutine(FOn());
         }
     }
+
+
 
     void Movement()
     {
@@ -57,11 +66,9 @@ public class PlayerController : MonoBehaviour
             hitted = true;
 
             StartCoroutine(On());
-
         }
         else
         {
-
             anim.SetBool("isHitted", false);
             hitted = false;
         }
@@ -75,8 +82,7 @@ public class PlayerController : MonoBehaviour
             {
                 anim.SetBool("isHitted", false);
                 hitted = false;
-            }
-          
-        }
+            }         
+        }  
     }
 }

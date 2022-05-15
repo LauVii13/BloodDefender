@@ -45,7 +45,7 @@ public class SlowControl : MonoBehaviour
         if (collision.gameObject.CompareTag("Defense-Zone"))
         {
             Destroy(gameObject);
-            GameController.instance.TotalScore -= 2f;
+            GameController.instance.TotalScore += 2f;
             GameController.instance.pain = true;
             /*if (cont == 0)
             {

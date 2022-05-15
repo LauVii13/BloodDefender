@@ -35,7 +35,7 @@ public class ProgressBar : MonoBehaviour
             {
                 if (GameController.instance.pain == true)
                 {
-                    slider.value += (GameController.instance.TotalScore * Time.deltaTime);
+                    slider.value -= (GameController.instance.TotalScore * Time.deltaTime);
                     StartCoroutine(On());
                     GameController.instance.pain = false;
                 }

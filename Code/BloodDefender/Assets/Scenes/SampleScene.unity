@@ -598,6 +598,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TotalScore: 0
+  pain: 0
 --- !u!4 &471902808
 Transform:
   m_ObjectHideFlags: 0
@@ -2456,6 +2457,7 @@ MonoBehaviour:
   moveSpeed: 5
   bullet: {fileID: 1433909393465727086, guid: e62470cca8cada44686c48823227850a, type: 3}
   spawnBullet: {fileID: 1937156942}
+  reload: 0.65
 --- !u!1 &1167682875
 GameObject:
   m_ObjectHideFlags: 0
