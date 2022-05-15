@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ProgressBar : MonoBehaviour
 {
     private Slider slider;
 
+    public GameObject CompleteLevelUI;
     public float FillSpeed;
     private float targetProgess = 0;
 
@@ -21,31 +23,38 @@ public class ProgressBar : MonoBehaviour
     void Start()
     {
         IncrementProgress(100f);
+        CompleteLevelUI.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
-    {
-        if(slider.value < targetProgess)
-        {
-            if (slider.value < 0)
+    {  
+            
+            if (slider.value < targetProgess)
             {
-                slider.value = 1;
-            }else
-            {
-                if (GameController.instance.pain == true)
+                if (slider.value < 0)
                 {
-                    slider.value -= (GameController.instance.TotalScore * Time.deltaTime);
-                    StartCoroutine(On());
-                    GameController.instance.pain = false;
+                    slider.value = 1;
                 }
                 else
                 {
-                    slider.value += FillSpeed * Time.deltaTime;
+                    if (GameController.instance.pain == true)
+                    {
+                        slider.value -= (GameController.instance.TotalScore * Time.deltaTime);
+                        StartCoroutine(On());
+                        GameController.instance.pain = false;
+                    }
+                    else
+                    {
+                        slider.value += FillSpeed * Time.deltaTime;
+                    }
                 }
-            }   
-        }
+            }     
 
+            if(slider.value == 1)
+            {
+                CompleteLevelUI.SetActive(true);
+            }
     }
 
     public void IncrementProgress(float newProgress)
@@ -57,4 +66,5 @@ public class ProgressBar : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
     }
+
 }

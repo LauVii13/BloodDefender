@@ -21,7 +21,7 @@ public class Wall : MonoBehaviour
     public void OnCollisionEnter2D(Collision2D collision)
     {
         //colisão com player
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Green") || collision.gameObject.CompareTag("Purple"))
         {
             anim.SetBool("Hit", true);
             StartCoroutine(On());

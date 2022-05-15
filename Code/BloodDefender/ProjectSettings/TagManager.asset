@@ -9,6 +9,8 @@ TagManager:
   - BottomWall
   - Enemy
   - Defense-Zone
+  - purple
+  - Green
   layers:
   - Default
   - TransparentFX

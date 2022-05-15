@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2359511856666559343}
   m_Layer: 0
   m_Name: Fast
-  m_TagString: Enemy
+  m_TagString: Green
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94,6 +94,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
+  d: 2
 --- !u!1 &2359511856854484449
 GameObject:
   m_ObjectHideFlags: 0

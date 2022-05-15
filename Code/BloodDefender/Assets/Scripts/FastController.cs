@@ -5,9 +5,10 @@ using UnityEngine;
 public class FastController : MonoBehaviour
 {
     [SerializeField] float speed;
-    
+    [SerializeField] float d;
 
-    
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,7 +34,7 @@ public class FastController : MonoBehaviour
         if (collision.gameObject.CompareTag("Defense-Zone"))
         {
             Destroy(this.gameObject);
-            GameController.instance.TotalScore += 1f;
+            GameController.instance.TotalScore += d;
             GameController.instance.pain = true;
         }
     }

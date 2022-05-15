@@ -5,6 +5,7 @@ using UnityEngine;
 public class SlowControl : MonoBehaviour
 {
     [SerializeField] float speed;
+    [SerializeField] float d;
 
     Animator anim;
     int cont = 0;
@@ -34,6 +35,7 @@ public class SlowControl : MonoBehaviour
             }
             else
             {
+                cont = 0;
                 Destroy(gameObject);
             }
         }
@@ -45,7 +47,7 @@ public class SlowControl : MonoBehaviour
         if (collision.gameObject.CompareTag("Defense-Zone"))
         {
             Destroy(gameObject);
-            GameController.instance.TotalScore += 2f;
+            GameController.instance.TotalScore += d;
             GameController.instance.pain = true;
             /*if (cont == 0)
             {
