@@ -65,6 +65,8 @@
     <Compile Include="Assets\Scripts\Finish.cs" />
     <Compile Include="Assets\Scripts\ProgressBar.cs" />
     <Compile Include="Assets\Scripts\Jogar.cs" />
+    <Compile Include="Assets\Scripts\DialogueControl.cs" />
+    <Compile Include="Assets\Scripts\Dialogue.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

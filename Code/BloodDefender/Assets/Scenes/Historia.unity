@@ -156,15 +156,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2223238636147482339, guid: d30d6d62fe85765468937de4143a8626, type: 3}
       propertyPath: m_Text
-      value: 'Lorem ipsum non duis tristique eu congue dolor dapibus etiam cursus,
-        enim porttitor volutpat tristique aenean auctor pulvinar duis massa tristique,
-        accumsan non fusce vel ut arcu ultricies integer mi. senectus nisl a nam
-        vestibulum odio et, condimentum elit dictum consequat arcu, consectetur magna
-        turpis mi dui. nisi inceptos rutrum sociosqu aliquet ad blandit potenti,
-        accumsan feugiat litora ullamcorper himenaeos quisque platea, eros semper
-        sit primis class semper. fermentum tortor integer adipiscing nec ullamcorper
-        massa fringilla, metus massa elementum dictum in fringilla bibendum, curabitur
-        metus quam cubilia leo metus. '
+      value: "Bem-Vindo, Jogador.\nVoce, como um bom entendedor da Biologia, foi
+        escalado para ajudar o nosso amigo Dennis, que est\xE1 reclamando de um machucado
+        na pele e que precisa ser reparado.\nEste machucado mede 7mm e rompeu alguns
+        vasos sanguineos, liberando substancias como os globulos vermelhos (tambem
+        conhecidos como Hemacias), responsavel pela cor avermelhada no sangue e pelo
+        transporte do oxigenio necessario as plaquetas,"
       objectReference: {fileID: 0}
     - target: {fileID: 2223238636147482339, guid: d30d6d62fe85765468937de4143a8626, type: 3}
       propertyPath: m_FontData.m_FontSize
@@ -188,15 +185,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2223238636740560563, guid: d30d6d62fe85765468937de4143a8626, type: 3}
       propertyPath: m_Text
-      value: 'Lorem ipsum non duis tristique eu congue dolor dapibus etiam cursus,
-        enim porttitor volutpat tristique aenean auctor pulvinar duis massa tristique,
-        accumsan non fusce vel ut arcu ultricies integer mi. senectus nisl a nam
-        vestibulum odio et, condimentum elit dictum consequat arcu, consectetur magna
-        turpis mi dui. nisi inceptos rutrum sociosqu aliquet ad blandit potenti,
-        accumsan feugiat litora ullamcorper himenaeos quisque platea, eros semper
-        sit primis class semper. fermentum tortor integer adipiscing nec ullamcorper
-        massa fringilla, metus massa elementum dictum in fringilla bibendum, curabitur
-        metus quam cubilia leo metus. '
+      value: 'estas que produizao os coagulos e, posterriormente, a coagulacao, formando
+        o tampao plaquetario, auzxiliando na defesa da regiao e na construicao da
+        famosa "casquinha". Enquanto isso, diversas bacterias estarao tentando penetrar
+        o ferimento, porem o sistema de protecao humano entrara em acao, e voce,
+        jogador,sera o encarrreagdo pelo globulo branco do tipo B, celula produzida
+        na medula para o combate de organismos envasores.
+
+        Boa sorte e salve
+        o Denis!'
       objectReference: {fileID: 0}
     - target: {fileID: 2223238636740560563, guid: d30d6d62fe85765468937de4143a8626, type: 3}
       propertyPath: m_FontData.m_FontSize
@@ -304,6 +301,18 @@ PrefabInstance:
 
 
 '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8988843875147655244, guid: d30d6d62fe85765468937de4143a8626, type: 3}
+      propertyPath: m_Color.b
+      value: 0.23025985
+      objectReference: {fileID: 0}
+    - target: {fileID: 8988843875147655244, guid: d30d6d62fe85765468937de4143a8626, type: 3}
+      propertyPath: m_Color.g
+      value: 0.23025985
+      objectReference: {fileID: 0}
+    - target: {fileID: 8988843875147655244, guid: d30d6d62fe85765468937de4143a8626, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9245283
       objectReference: {fileID: 0}
     - target: {fileID: 8988843875147655245, guid: d30d6d62fe85765468937de4143a8626, type: 3}
       propertyPath: m_AnchorMax.x

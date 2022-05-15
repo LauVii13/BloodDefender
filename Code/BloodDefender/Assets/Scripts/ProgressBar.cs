@@ -28,8 +28,11 @@ public class ProgressBar : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {  
-            
+    {
+        if (GameController.instance.comeca)
+        {
+
+
             if (slider.value < targetProgess)
             {
                 if (slider.value < 0)
@@ -49,12 +52,14 @@ public class ProgressBar : MonoBehaviour
                         slider.value += FillSpeed * Time.deltaTime;
                     }
                 }
-            }     
+            }
 
-            if(slider.value == 1)
+            if (slider.value == 1)
             {
                 CompleteLevelUI.SetActive(true);
             }
+
+        }
     }
 
     public void IncrementProgress(float newProgress)

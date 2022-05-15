@@ -17,18 +17,24 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        anim = GetComponentInChildren<Animator>();
+        
+            anim = GetComponentInChildren<Animator>();
+        
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        anim.SetBool("isMoving", (Mathf.Abs(moveInput.x) > 0 || Mathf.Abs(moveInput.y) > 0));
-
-        if (hitted == false)
+       if (GameController.instance.comeca == true)
         {
-            Movement();
-            Shoot();
+            anim.SetBool("isMoving", (Mathf.Abs(moveInput.x) > 0 || Mathf.Abs(moveInput.y) > 0));
+
+            if (hitted == false)
+            {
+                Movement();
+                Shoot();
+            }
         }
     }
     IEnumerator FOn()

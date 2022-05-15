@@ -6,13 +6,14 @@ public class GameController : MonoBehaviour
 {
     public float TotalScore;
     public bool pain;
+    public bool comeca;
 
     public static GameController instance;
 
     
 
-    // Start is called before the first frame update
-    void Start()
+// Start is called before the first frame update
+void Start()
     {
         instance = this;
     }

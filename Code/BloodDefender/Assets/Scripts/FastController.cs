@@ -18,6 +18,10 @@ public class FastController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(GameController.instance.comeca == false)
+        {
+            Destroy(gameObject);
+        }
         transform.Translate(Vector2.left * speed * Time.deltaTime);
     }
 
@@ -31,6 +35,12 @@ public class FastController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.CompareTag("purple") == gameObject)
+        {
+            Physics2D.IgnoreCollision(collision.gameObject.GetComponent<Collider2D>(), GetComponent<Collider2D>());
+        }
+
+
         if (collision.gameObject.CompareTag("Defense-Zone"))
         {
             Destroy(this.gameObject);

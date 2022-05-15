@@ -20,6 +20,10 @@ public class SlowControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameController.instance.comeca == false)
+        {
+            Destroy(gameObject);
+        }
         transform.Translate(Vector2.left * speed * Time.deltaTime);
     }
 
