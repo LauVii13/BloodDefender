@@ -8,7 +8,6 @@ public class FastController : MonoBehaviour
     [SerializeField] float d;
 
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +29,8 @@ public class FastController : MonoBehaviour
         if (collision.CompareTag("Bullet"))
         {
             Destroy(gameObject);
+            GameController.instance.kill++;
+            
         }
     }
 

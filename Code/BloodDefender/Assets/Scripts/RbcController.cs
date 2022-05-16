@@ -7,6 +7,7 @@ public class RbcController : MonoBehaviour
     [SerializeField] float speed;
     Animator anim;
     bool isAlive = true;
+    AudioSource shootFx;
 
 
 
@@ -14,6 +15,7 @@ public class RbcController : MonoBehaviour
     void Start()
     {
         anim = GetComponentInChildren<Animator>();
+        shootFx = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -36,6 +38,7 @@ public class RbcController : MonoBehaviour
         //acertado por um tiro
         if (collision.CompareTag("Bullet"))
         {
+            shootFx.Play();
             anim.SetTrigger("Dead");
             isAlive = false;
             Destroy(gameObject, 1f);

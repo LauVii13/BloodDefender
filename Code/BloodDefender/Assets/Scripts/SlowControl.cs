@@ -9,12 +9,13 @@ public class SlowControl : MonoBehaviour
 
     Animator anim;
     int cont = 0;
-
+    int verifica = 0;
 
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponentInChildren<Animator>();
+        
     }
 
     // Update is called once per frame
@@ -25,6 +26,8 @@ public class SlowControl : MonoBehaviour
             Destroy(gameObject);
         }
         transform.Translate(Vector2.left * speed * Time.deltaTime);
+
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -33,6 +36,7 @@ public class SlowControl : MonoBehaviour
          {
             if (cont == 0)
             {
+               
                 anim.SetBool("Hit", true);
                 StartCoroutine(On());
                 cont++;
@@ -41,6 +45,7 @@ public class SlowControl : MonoBehaviour
             {
                 cont = 0;
                 Destroy(gameObject);
+                GameController.instance.kill++;
             }
         }
      }

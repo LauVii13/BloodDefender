@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: map-spritesheet_1
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 7293919121297285341, guid: 4873bc53c8f13544ca588e6562195a3a, type: 3}
+  m_Sprite: {fileID: 7293919121297285341, guid: 2153ee82029d10946abccfb16739be98, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1

@@ -7,6 +7,9 @@ public class GameController : MonoBehaviour
     public float TotalScore;
     public bool pain;
     public bool comeca;
+    public int kill = 0;
+
+    public bool destruir = true;
 
     public static GameController instance;
 

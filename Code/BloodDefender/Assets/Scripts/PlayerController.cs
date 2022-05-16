@@ -4,23 +4,25 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+
+    
     [SerializeField] float moveSpeed;
     Vector2 moveInput;
-
+    AudioSource shootFx;
     public GameObject bullet;
     bool hitted = false;
     bool loading = false;
     [SerializeField] Transform spawnBullet;
-    [SerializeField] float reload;
+     float reload = 0.55f;
     Animator anim;
 
     // Start is called before the first frame update
     void Start()
     {
         
-            anim = GetComponentInChildren<Animator>();
-        
-        
+        anim = GetComponentInChildren<Animator>();
+        shootFx = GetComponent<AudioSource>();
+
     }
 
     // Update is called once per frame
@@ -35,6 +37,8 @@ public class PlayerController : MonoBehaviour
                 Movement();
                 Shoot();
             }
+
+            
         }
     }
     IEnumerator FOn()
@@ -47,6 +51,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump") && loading == false)
         {
+            shootFx.Play();
             Instantiate(bullet, spawnBullet.position, transform.rotation);
             loading = true;
             StartCoroutine(FOn());
@@ -68,6 +73,7 @@ public class PlayerController : MonoBehaviour
         //colisão com player
         if (collision.gameObject.CompareTag("Rbc"))
         {
+            shootFx.Play();
             anim.SetBool("isHitted", true);
             hitted = true;
 
